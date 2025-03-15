@@ -6,7 +6,7 @@ backend:
   app_id: Ov23li3lL1IFRemCcUIx # Replace with your Client ID
   api_root: https://api.github.com
   base_url: https://www.perpetualstyle.co.za # Your site URL
-  auth_endpoint: login/oauth/authorize
+  auth_endpoint: auth_endpoint: https://github.com/login/oauth/authorize
 media_folder: "static/images" # Folder for uploaded images
 public_folder: "/images" # Public path for images
 collections:
