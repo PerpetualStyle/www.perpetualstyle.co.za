@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: PerpetualStyle/www.perpetualstyle.co.za
-  branch: master # or your default branch
+  branch: main # or your default branch
   auth_type: implicit # Use implicit grant for GitHub Pages
   app_id: Ov23li3lL1IFRemCcUIx # Replace with your Client ID
   api_root: https://api.github.com
