@@ -2,7 +2,8 @@ backend:
   name: github
   repo: PerpetualStyle/www.perpetualstyle.co.za
   branch: main # or your default branch
-  auth_endpoint: https://dev-4a45a4rlewxn1ja0.us.auth0.com/authorize
+  base_url: https://dev-4a45a4rlewxn1ja0.us.auth0.com # Your site URL
+  auth_endpoint: /authorize
 media_folder: "static/images" # Folder for uploaded images
 public_folder: "/images" # Public path for images
 collections:
