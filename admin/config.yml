@@ -8,7 +8,7 @@ backend:
   auth_scope: repo # Use implicit grant for GitHub Pages
   api_root: https://api.github.com
   base_url: https://github.com
-  auth_endpoint: login/oauth/authorize
+  auth_endpoint: login/oauth/authorize?client_id=Ov23li3lL1IFRemCcUIx&redirect_uri=https%3A%2F%2Fwww.perpetualstyle.co.za%2Fadmin
 media_folder: "static/images" # Folder for uploaded images
 public_folder: "/images" # Public path for images
 collections:
