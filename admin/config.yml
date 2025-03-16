@@ -3,7 +3,8 @@ backend:
   repo: PerpetualStyle/www.perpetualstyle.co.za
   branch: main # or your default branch
   auth:
-    client_id: Ov23li3lL1IFRemCcUIx # Replace with your Client ID
+    client_id: "Ov23li3lL1IFRemCcUIx" # Replace with your Client ID
+    redirect_url: "https://www.perpetualstyle.co.za/admin"
   auth_scope: repo # Use implicit grant for GitHub Pages
   api_root: https://api.github.com
   base_url: https://github.com
