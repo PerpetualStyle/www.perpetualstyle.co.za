@@ -4,11 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Content Manager</title>
+    <!-- Add the Decap CMS CSS file -->
+    <link href="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Add a container for the CMS -->
+    <div id="cms"></div>
+
+    <!-- Load Decap CMS JavaScript -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
     <script>
-        CMS.init();
+        // Initialize Decap CMS and load the config.yml file
+        CMS.init({
+            config: '/config.yml' // Path to your config.yml file
+        });
     </script>
 </body>
 </html>
