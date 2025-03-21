@@ -4,13 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Content Manager</title>
+    <script>
+        (function() {
+            // Extract the access token from the URL fragment
+            var tokenMatch = window.location.hash.match(/access_token=([^&]+)/);
+            if (tokenMatch) {
+                // Store token in localStorage so DecapCMS can access it
+                localStorage.setItem("netlify-cms-user", JSON.stringify({ token: tokenMatch[1] }));
+
+                // Clean up the URL (remove token from address bar)
+                window.location.hash = "";
+
+                // If inside a popup, send message to parent & close
+                if (window.opener) {
+                    window.opener.postMessage({ token: tokenMatch[1] }, "*");
+                    window.close();
+                } else {
+                    // Reload the page if it's not in a popup
+                    window.location.reload();
+                }
+            }
+        })();
+    </script>
+    <!-- Load DecapCMS -->
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </head>
 <body>
-    <!-- Container for Decap CMS -->
-    <div id="cms"></div>
-
-    <!-- Load Decap CMS -->
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-   
+    <script>
+        CMS.init();
+    </script>
 </body>
 </html>
