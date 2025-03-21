@@ -3,7 +3,7 @@ backend:
   repo: PerpetualStyle/www.perpetualstyle.co.za
   branch: main # or your default branch
   base_url: http://localhost:3000 # Your site URL
-  auth_endpoint: /auth?site=www.perpetualstyle.co.za&redirect_uri=https://www.perpetualstyle.co.za/admin
+  auth_endpoint: /auth?site=www.perpetualstyle.co.za&redirect_uri=https%3A%2F%2Fwww.perpetualstyle.co.za%2Fadmin
 media_folder: "static/images" # Folder for uploaded images
 public_folder: "/images" # Public path for images
 collections:
