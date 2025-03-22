@@ -23,7 +23,7 @@
             // ✅ If inside a popup, send messages to parent & close
             if (window.opener) {
                 // **Step 1:** Signal that authorization is in progress
-                window.opener.postMessage("authorizing:github", "*");
+                window.opener.postMessage("authorizing:github", "http://localhost:3000");
 
                 // **Step 2:** Send the actual token
                 var message = `authorization:github:success:{"token":"${token}"}`;
