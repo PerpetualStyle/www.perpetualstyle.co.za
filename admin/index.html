@@ -17,7 +17,7 @@
 
                 // If inside a popup, send message to parent & close
                 if (window.opener) {
-                    window.opener.postMessage({ token: tokenMatch[1] }, "*");
+                    window.opener.postMessage(`authorization:github:success:{"token":"${tokenMatch[1]}"}`, *);
                     window.close();
                 } else {
                     // Reload the page if it's not in a popup
