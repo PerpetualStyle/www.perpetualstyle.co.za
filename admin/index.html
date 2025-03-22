@@ -10,7 +10,7 @@
             var tokenMatch = window.location.hash.match(/access_token=([^&]+)/);
             if (tokenMatch) {
                 // Store token in localStorage so DecapCMS can access it
-                localStorage.setItem("decap-cms-user", JSON.stringify({ token: tokenMatch[1] }));
+                localStorage.setItem("cms.auth", JSON.stringify({ token: tokenMatch[1], provider: "github" }));
 
                 // Clean up the URL (remove token from address bar)
                 window.location.hash = "";
